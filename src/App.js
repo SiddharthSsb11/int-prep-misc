@@ -1,9 +1,10 @@
 import "./App.css";
+import RemoveDuplicates from "./DS/Arrays/remove-duplicates";
 
 function App() {
   return (
     <div className="App">
-      <h1>Int-Prep</h1>
+      <RemoveDuplicates></RemoveDuplicates>
     </div>
   );
 }
