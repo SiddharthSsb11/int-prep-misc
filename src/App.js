@@ -1,10 +1,10 @@
 import "./App.css";
-import RemoveDuplicates from "./DS/Arrays/remove-duplicates";
+import MaxSumSubArray from "./DS/Arrays/max-sum-sub-array";
 
 function App() {
   return (
     <div className="App">
-      <RemoveDuplicates></RemoveDuplicates>
+      <MaxSumSubArray></MaxSumSubArray>
     </div>
   );
 }
