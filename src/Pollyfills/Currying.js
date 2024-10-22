@@ -59,6 +59,55 @@ const Currying = () => {
   const updateHeaderText = updateElemText("header");
   updateHeaderText("Subscribe to RoadsideCoder!");
 
+  // Question 8 : Curry() implementation
+
+  function curry(func) {
+    return function curriedFunc(...args) {
+      // console.log(args.length, func.length);
+      if (args.length >= func.length) {
+        return func(...args);
+      } else {
+        return function (...next) {
+          return curriedFunc(...args, ...next);
+        };
+      }
+    };
+  }
+
+  const sumCurry = (a, b, c) => a + b + c;
+
+  const totalSum = curry(sumCurry);
+  console.log(totalSum(1)(6)(5));
+
+  //   Step 1: Call totalSum(1)
+  // totalSum is called with 1:
+  // args becomes [1].
+  // args.length is 1, and sumCurry requires 3 arguments (func.length).
+  // Since args.length (1) is less than func.length (3), we enter the else block:
+  // return function (...next) {
+  //   return curriedFunc(...args, ...next);
+  // };
+  // The function returns a new function that expects more arguments.
+  // Step 2: Call the Returned Function with 6: totalSum(1)(6)
+  // Now, call the returned function with 6:
+  // next becomes [6].
+  // curriedFunc is invoked again with ...args ([1]) and ...next ([6]):
+  // return curriedFunc(1, 6);
+  // Now, args is [1, 6].
+  // args.length is 2, which is still less than 3.
+  // The else block is executed again, returning another function that can accept more arguments:
+  // return function (...next) {
+  //   return curriedFunc(...args, ...next);
+  // };
+  // Step 3: Call the Next Returned Function with 5: totalSum(1)(6)(5)
+  // Call the newly returned function with 5:
+  // next becomes [5].
+  // curriedFunc is invoked with ...args ([1, 6]) and ...next ([5]):
+  // return curriedFunc(1, 6, 5);
+  // Now, args is [1, 6, 5].
+  // args.length is 3, which matches the required number of arguments (func.length).
+  // This time, we execute the if condition:
+
   return <div>Currying</div>;
 };
 
