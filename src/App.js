@@ -1,10 +1,9 @@
 import "./App.css";
-import MaxSumSubArray from "./DS/Arrays/max-sum-sub-array";
-
+import AccordionApp from "./Machine Coding/React/Accordion/AccordionApp";
 function App() {
   return (
-    <div className="App">
-      <MaxSumSubArray></MaxSumSubArray>
+    <div>
+      <AccordionApp />
     </div>
   );
 }
