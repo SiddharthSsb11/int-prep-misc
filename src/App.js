@@ -1,9 +1,9 @@
 import "./App.css";
-import AccordionApp from "./Machine Coding/React/Accordion/AccordionApp";
+import PokemonApp from "./Machine Coding/React/Pokemon/PokemonApp";
 function App() {
   return (
     <div>
-      <AccordionApp />
+      <PokemonApp />
     </div>
   );
 }

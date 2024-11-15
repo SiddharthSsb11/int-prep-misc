@@ -7,6 +7,7 @@
 import React from "react";
 
 const MaxSumSubArray = () => {
+  //kadane algo
   const maxSumSub = (arr) => {
     let currSum = 0; //current sub array sum
     let maxSum = arr[0];

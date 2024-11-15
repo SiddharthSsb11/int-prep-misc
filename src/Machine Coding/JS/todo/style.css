@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    padding: 0 15px;
+    background-color: #f4f4f4;
+}
+
+.todo-input {
+    margin-right: 8px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px
+}
+
+.todo-button {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px
+}
