@@ -1,10 +1,9 @@
 import "./App.css";
-import PokemonApp from "./Machine Coding/React/Pokemon/PokemonApp";
-import InfinetScrollApp from "./Machine Coding/React/Infinte Scroll Good/InfinetScrollApp";
+import ProgresApp from "./Machine Coding/React/ProgreesBar/ProgresApp";
 function App() {
   return (
     <div>
-      <InfinetScrollApp />
+      <ProgresApp />
     </div>
   );
 }
