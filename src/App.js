@@ -1,9 +1,9 @@
 import "./App.css";
-import Virtualization from "./Machine Coding/React/Virtualization/Virtualization";
+import FileExplorerApp from "./Machine Coding/React/File Explorer/FileExplorerApp";
 function App() {
   return (
     <div>
-      <Virtualization />
+      <FileExplorerApp />
     </div>
   );
 }
