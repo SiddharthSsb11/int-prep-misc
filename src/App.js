@@ -1,9 +1,9 @@
 import "./App.css";
-import ProgresApp from "./Machine Coding/React/ProgreesBar/ProgresApp";
+import Virtualization from "./Machine Coding/React/Virtualization/Virtualization";
 function App() {
   return (
     <div>
-      <ProgresApp />
+      <Virtualization />
     </div>
   );
 }
