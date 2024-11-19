@@ -21,13 +21,13 @@ const useTraverseTree = () => {
   };
 
   // Delete a node from the tree
-  const deleteNode = (tree, nodeId) => {
+  const deleteNode = (tree, folderId) => {
     // If the tree's items contain the node to be deleted
-    const filteredItems = tree.items.filter((item) => item.id !== nodeId);
+    const filteredItems = tree.items.filter((obj) => obj.id !== folderId);
 
     // If the current tree node contains items, recursively process them
-    const updatedItems = filteredItems.map((item) => {
-      return deleteNode(item, nodeId);
+    const updatedItems = filteredItems.map((obj) => {
+      return deleteNode(obj, folderId);
     });
 
     // Return the updated tree with filtered items

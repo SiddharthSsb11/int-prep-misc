@@ -11,8 +11,8 @@ const FileExplorerApp = () => {
     setExplorerData(updatedTree);
   };
 
-  const handleDeleteNode = (nodeId) => {
-    const updatedTree = deleteNode(explorerData, nodeId);
+  const handleDeleteNode = (folderId) => {
+    const updatedTree = deleteNode(explorerData, folderId);
     setExplorerData(updatedTree);
   };
 

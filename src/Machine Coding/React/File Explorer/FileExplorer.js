@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./style.css";
-import { isVisible } from "@testing-library/user-event/dist/utils";
 
 const FileExplorer = ({ explorer, handleInsertNode, handleDeleteNode }) => {
   const [showChildren, setShowChildren] = useState(false);
