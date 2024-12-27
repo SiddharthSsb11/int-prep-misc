@@ -189,3 +189,49 @@ pause(1000).then((res) => {
 // MicroTask - then
 
 // resolved: 1.3
+
+console.log("Start"); // 1
+
+setTimeout(() => {
+  console.log("Timeout 1"); // 7
+
+  Promise.resolve().then(() => {
+    console.log("Promise 1");
+  }); // 8
+
+  setTimeout(() => {
+    console.log("Timeout 3");
+  }, 0); // 10
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Promise 2"); //2
+
+  setTimeout(() => {
+    console.log("Timeout 2");
+  }, 0); // 9
+});
+
+async function asyncFunction() {
+  console.log("Async 1"); // 3
+
+  await Promise.resolve(); //
+  console.log("Async 2"); // 4
+
+  await null;
+  console.log("Async 3"); // 5
+}
+asyncFunction();
+
+console.log("End"); // 6
+
+// Start
+// Async 1
+// End
+// Promise 2
+// Async 2
+// Async 3
+// Timeout 1
+// Promise 1
+// Timeout 2
+// Timeout 3
